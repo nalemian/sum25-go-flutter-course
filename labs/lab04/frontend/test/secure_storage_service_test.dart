@@ -1,10 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:lab04_frontend/services/secure_storage_service.dart';
 
 void main() {
   // Initialize Flutter bindings for platform channels
-  TestWidgetsFlutterBinding.ensureInitialized(); 
+  TestWidgetsFlutterBinding.ensureInitialized();
 
   group('SecureStorageService Tests', () {
     setUp(() async {
