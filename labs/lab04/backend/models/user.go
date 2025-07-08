@@ -49,6 +49,7 @@ func (req *CreateUserRequest) Validate() error {
 	if !regexp.MustCompile(`^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$`).MatchString(req.Email) {
 		return fmt.Errorf("invalid email format")
 	}
+	return nil
 }
 
 // Converts CreateUserRequest to User
@@ -67,6 +68,7 @@ func (u *User) ScanRow(row *sql.Row) error {
 	if err != nil {
 		return err
 	}
+	return nil
 }
 
 // Scans multiple database rows into User slice

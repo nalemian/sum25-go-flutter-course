@@ -23,6 +23,7 @@ func NewUserRepository(db *sql.DB) *UserRepository {
 
 // Creates a new user in the database
 func (r *UserRepository) Create(req *models.CreateUserRequest) (*models.User, error) {
+	var user models.User
 	if err := req.Validate(); err != nil {
 		return nil, err
 	}

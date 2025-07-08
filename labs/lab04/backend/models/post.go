@@ -80,6 +80,7 @@ func (p *Post) ScanRow(row *sql.Row) error {
 	if err != nil {
 		return err
 	}
+	return nil
 }
 
 // Scans multiple database rows into Post slice

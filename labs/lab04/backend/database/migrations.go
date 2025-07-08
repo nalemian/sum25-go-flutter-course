@@ -41,6 +41,7 @@ func RollbackMigration(db *sql.DB) error {
 	if err := goose.Down(db, migrationsDirectory); err != nil {
 		return fmt.Errorf("failed to rollback migration: %v", err)
 	}
+	return nil
 }
 
 // TODO: Implement this function
@@ -56,6 +57,7 @@ func GetMigrationStatus(db *sql.DB) error {
 	if err := goose.Status(db, migrationsDirectory); err != nil {
 		return fmt.Errorf("failed to get migration status: %v", err)
 	}
+	return nil
 }
 
 // CreateMigration creates a new migration file
@@ -67,4 +69,5 @@ func CreateMigration(name string) error {
 	if err := goose.Create(nil, migrationsDirectory, name, "sql"); err != nil {
 		return fmt.Errorf("failed to create migration: %v", err)
 	}
+	return nil
 }
