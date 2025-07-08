@@ -3,9 +3,7 @@ package models
 import (
 	"database/sql"
 	"time"
-	"errors"
 	"regexp"
-	"strings"
 	"fmt"
 )
 
